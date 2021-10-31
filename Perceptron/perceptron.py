@@ -55,19 +55,19 @@ for w in n: #iterates over n
                if(pred == y_testSample):
                   correct+=1
             tempAccuracy = correct/len(X_test)
-
-            if(tempAccuracy > pAccuracy and a == 0):
-               pAccuracy = tempAccuracy
-               print("Highest Perceptron accuracy so far: " + str(pAccuracy) + ", Parameters: learning rate=" + str(w) +", random_state=" +str(b))
-            elif(tempAccuracy > mlpAccuracy and a != 0):
-               mlpAccuracy = tempAccuracy
-               print("Highest MLP accuracy so far: " + str(mlpAccuracy) + ", Parameters: learning rate=" + str(w) +", random_state=" +str(b))
-
             
             #check if the calculated accuracy is higher than the previously one calculated for each classifier. If so, update the highest accuracy and print it together with the network hyperparameters
             #Example: "Highest Perceptron accuracy so far: 0.88, Parameters: learning rate=0.01, random_state=True"
             #Example: "Highest MLP accuracy so far: 0.90, Parameters: learning rate=0.02, random_state=False"
             #--> add your Python code here
+            if(tempAccuracy > pAccuracy and a == 0):
+               pAccuracy = tempAccuracy
+               print("Highest Perceptron accuracy so far: " + str(pAccuracy) + 
+               ", Parameters: learning rate=" + str(w) +", random_state=" +str(b))
+            elif(tempAccuracy > mlpAccuracy and a != 0):
+               mlpAccuracy = tempAccuracy
+               print("Highest MLP accuracy so far: " + str(mlpAccuracy) + 
+               ", Parameters: learning rate=" + str(w) +", random_state=" +str(b))
 
 
 
